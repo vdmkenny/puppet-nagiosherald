@@ -10,7 +10,8 @@ class nagiosherald{
     # path    => [ '/usr/local/bin/', '/bin/' ],  # alternative syntax
   	}
 
-    file{
-	
+    file{'/etc/icinga/objects/commands.cfg':
+	owner => root,
+        source => 'puppet:///modules/nagiosherald/commands.cfg',
 	}
 }
