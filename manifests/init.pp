@@ -1,4 +1,14 @@
 class nagiosherald{
+    
+    
+    $graphiteserver = 'graphite2.internal.inuits.eu',
+    $logstashserver = 'https://kibana.inuits.eu:9200',
+    $logstashfrontend = 'https://kibana.inuits.eu/index.html#/dashboard/file/logstash.json?from=%{from}&to=%{to}&query=%{query}',
+    $resultfieldtruncate = '200',
+    $numresults = '10',
+    $logfile = '/tmp/nagios-herald.log',
+    $formatterdir = '/usr/local/nagios-herald-formatters',
+    $icinga = true,
 
 
     package{'nagios-herald':
