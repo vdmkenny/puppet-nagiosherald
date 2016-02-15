@@ -8,7 +8,12 @@ class nagiosherald(
     $numresults = '10',
     $logfile = '/tmp/nagios-herald.log',
     $formatterdir = '/usr/local/nagios-herald-formatters',
-    $icinga = true,)
+    $icinga = true,
+    
+    $nagios_cgi = 'https://icinga.inuits.eu/cgi-bin/cmd.cgi',
+    $replyto = 'noreply@inuits.eu',
+
+    )
     
     {
 
