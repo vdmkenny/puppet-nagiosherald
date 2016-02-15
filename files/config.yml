@@ -3,8 +3,9 @@ servers:
     graphite: graphite2.internal.inuits.eu
 
 elasticsearch:
-  frontend_url: https://logstash2.inuits.eu/_es/_all/_search?
-  result_field_truncate: 200
+    url: https://kibana.inuits.eu/index.html:9200
+    frontend_url: https://kibana.inuits.eu/index.html#/dashboard/file/logstash.json?from=%{from}&to=%{to}&query=%{query}
+    result_field_truncate: 200
   num_results: 10
 logfile: /tmp/nagios-herald.log
 formatter_dir: /usr/local/nagios-herald-formatters
