@@ -10,9 +10,9 @@ class nagiosherald{
     # path    => [ '/usr/local/bin/', '/bin/' ],  # alternative syntax
   	}
 
-    file{'/etc/icinga/objects/commands.cfg':
+    file{'/etc/icinga/objects/notify-by-herald.cfg':
 	owner  => root,
-        source => 'puppet:///modules/nagiosherald/commands.cfg',
+        source => 'puppet:///modules/nagiosherald/notify-by-herald.cfg',
 	}
 
     file{'/usr/local/nagios-herald/etc/config.yml':
