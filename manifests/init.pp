@@ -10,7 +10,7 @@ class nagiosherald{
     # path    => [ '/usr/local/bin/', '/bin/' ],  # alternative syntax
   	}
 
-    file{'/etc/icinga/objects/notify-by-herald.cfg':
+    file{'/etc/icinga/objects/commands/notify-by-herald.cfg':
 	owner  => root,
         source => 'puppet:///modules/nagiosherald/notify-by-herald.cfg',
 	}
