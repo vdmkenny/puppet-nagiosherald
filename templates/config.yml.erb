@@ -1,0 +1,10 @@
+servers:
+    graphite: <%= @graphiteserver %>
+elasticsearch:
+    url: <%= @logstashserver %>
+    frontend_url: <%= @logstashfrontend %>
+    result_field_truncate: <%= @resultfieldtruncate %>
+  num_results: <%= @numresults %>
+logfile: <%= @logfile %>
+formatter_dir: <%= @formatterdir %>
+icinga: <%= @icinga %>

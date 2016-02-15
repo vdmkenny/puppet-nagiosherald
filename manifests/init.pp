@@ -1,4 +1,4 @@
-class nagiosherald{
+class nagiosherald(
     
     
     $graphiteserver = 'graphite2.internal.inuits.eu',
@@ -8,7 +8,9 @@ class nagiosherald{
     $numresults = '10',
     $logfile = '/tmp/nagios-herald.log',
     $formatterdir = '/usr/local/nagios-herald-formatters',
-    $icinga = true,
+    $icinga = true,)
+    
+    {
 
 
     package{'nagios-herald':
@@ -22,6 +24,7 @@ class nagiosherald{
 
     file{'/usr/local/nagios-herald/etc/config.yml':
         owner  => root,
-        source => 'puppet:///modules/nagiosherald/config.yml', 
+        #source => 'puppet:///modules/nagiosherald/config.yml',
+        content => template('nagiosherald/config.yml.erb'),
     }
 }
