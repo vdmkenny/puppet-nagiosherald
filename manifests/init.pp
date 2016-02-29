@@ -1,11 +1,7 @@
 class nagiosherald{
 
     package{'ruby':
-        ensure => '1.9.2',
-    }
-
-    package{'gem':
-        ensure => present,
+        ensure => latest,
     }
 
     package{'nagios-herald':
